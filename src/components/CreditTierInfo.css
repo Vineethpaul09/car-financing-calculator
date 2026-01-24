@@ -1,0 +1,123 @@
+.credit-tier-info {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.tier-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.tier-icon {
+  font-size: 1.5rem;
+}
+
+.tier-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.tier-table-wrapper {
+  overflow-x: auto;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+}
+
+.tier-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 450px;
+}
+
+.tier-table th,
+.tier-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tier-table th {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--bg-secondary);
+}
+
+.tier-table tr.tier-excellent {
+  background: #22c55e10;
+}
+
+.tier-table tr.tier-good {
+  background: #84cc1610;
+}
+
+.tier-table tr.tier-fair {
+  background: #eab30810;
+}
+
+.tier-table tr.tier-poor {
+  background: #ef444410;
+}
+
+.tier-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tier-score {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.tier-rate {
+  font-family: "SF Mono", "Monaco", "Consolas", monospace;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.tier-tips {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.tier-tips h4 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.tier-tips ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.tier-tips li {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.375rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  .tier-table {
+    font-size: 0.8rem;
+  }
+
+  .tier-table th,
+  .tier-table td {
+    padding: 0.5rem;
+  }
+}

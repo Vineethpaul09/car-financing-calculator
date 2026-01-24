@@ -1,0 +1,137 @@
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .metrics-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.metric-card {
+  background: var(--card-bg, #ffffff);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.metric-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--icon-bg, #f3f4f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.metric-icon {
+  font-size: 1.25rem;
+}
+
+.metric-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.metric-label {
+  font-size: 0.7rem;
+  color: var(--text-secondary, #6b7280);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.metric-value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary, #111827);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.metric-subtext {
+  font-size: 0.7rem;
+  color: var(--text-tertiary, #9ca3af);
+}
+
+.metric-subtext.trend-up {
+  color: var(--success, #22c55e);
+}
+
+.metric-subtext.trend-down {
+  color: var(--success, #22c55e);
+}
+
+/* Highlight states */
+.metric-card.highlight-success {
+  border-color: var(--success, #22c55e);
+  background: var(--success-bg, rgba(34, 197, 94, 0.05));
+}
+
+.metric-card.highlight-success .metric-icon-wrapper {
+  background: var(--success-light, rgba(34, 197, 94, 0.15));
+}
+
+.metric-card.highlight-warning {
+  border-color: var(--warning, #f59e0b);
+  background: var(--warning-bg, rgba(245, 158, 11, 0.05));
+}
+
+.metric-card.highlight-warning .metric-icon-wrapper {
+  background: var(--warning-light, rgba(245, 158, 11, 0.15));
+}
+
+.metric-card.highlight-danger {
+  border-color: var(--danger, #ef4444);
+  background: var(--danger-bg, rgba(239, 68, 68, 0.05));
+}
+
+.metric-card.highlight-danger .metric-icon-wrapper {
+  background: var(--danger-light, rgba(239, 68, 68, 0.15));
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .metric-card {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .metric-icon-wrapper {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .metric-icon {
+    font-size: 1rem;
+  }
+
+  .metric-value {
+    font-size: 1rem;
+  }
+}

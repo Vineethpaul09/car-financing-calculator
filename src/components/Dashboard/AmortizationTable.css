@@ -1,0 +1,103 @@
+.amortization-section {
+  background: var(--card-bg, #ffffff);
+  border-radius: 20px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  overflow: hidden;
+}
+
+.amortization-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary, #111827);
+  margin: 0;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 4px;
+  background: var(--toggle-bg, #f3f4f6);
+  padding: 4px;
+  border-radius: 10px;
+}
+
+.view-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary, #6b7280);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-btn.active {
+  background: var(--card-bg, #ffffff);
+  color: var(--text-primary, #111827);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+  overflow-x: auto;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.amort-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.amort-table th {
+  position: sticky;
+  top: 0;
+  background: var(--table-header-bg, #f9fafb);
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary, #6b7280);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
+
+.amort-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-light, #f3f4f6);
+  color: var(--text-primary, #111827);
+}
+
+.amort-table tbody tr:hover {
+  background: var(--hover-bg, #f9fafb);
+}
+
+.year-cell,
+.month-cell {
+  font-weight: 700;
+  color: var(--primary, #2563eb);
+}
+
+.principal {
+  color: var(--success, #22c55e);
+}
+
+.interest {
+  color: var(--warning, #f59e0b);
+}
+
+.amortization-empty {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-secondary, #6b7280);
+}

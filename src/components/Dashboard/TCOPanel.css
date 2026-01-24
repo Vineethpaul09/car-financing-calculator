@@ -1,0 +1,213 @@
+.tco-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tco-header {
+  text-align: center;
+}
+
+.tco-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary, #111827);
+  margin: 0;
+}
+
+.tco-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #6b7280);
+  margin: 4px 0 0;
+}
+
+.tco-hero {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  color: white;
+}
+
+.tco-hero-amount {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2px;
+}
+
+.tco-currency {
+  font-size: 1.5rem;
+  font-weight: 700;
+  opacity: 0.8;
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.tco-value {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.tco-period {
+  font-size: 1.25rem;
+  opacity: 0.8;
+  margin-left: 4px;
+}
+
+.tco-hero-meta {
+  margin-top: 12px;
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.meta-divider {
+  margin: 0 8px;
+}
+
+.cost-breakdown {
+  background: var(--card-bg, #ffffff);
+  border-radius: 16px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  padding: 20px;
+}
+
+.breakdown-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary, #111827);
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cost-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-light, #f3f4f6);
+}
+
+.cost-item:last-child {
+  border-bottom: none;
+}
+
+.cost-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cost-icon {
+  font-size: 1.25rem;
+}
+
+.cost-label {
+  font-size: 0.875rem;
+  color: var(--text-primary, #111827);
+  font-weight: 500;
+}
+
+.cost-item-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.cost-value {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary, #111827);
+}
+
+.cost-bar {
+  width: 80px;
+  height: 4px;
+  background: var(--bar-bg, #e5e7eb);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.cost-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.depreciation-section {
+  background: var(--card-bg, #ffffff);
+  border-radius: 16px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  padding: 20px;
+}
+
+.depreciation-cards {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.depreciation-card {
+  flex: 0 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px;
+  background: var(--dep-card-bg, #f9fafb);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.dep-year {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary, #6b7280);
+  text-transform: uppercase;
+}
+
+.dep-value {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary, #111827);
+}
+
+.dep-percent {
+  font-size: 0.7rem;
+  color: var(--text-tertiary, #9ca3af);
+}
+
+.depreciation-summary {
+  display: flex;
+  gap: 16px;
+}
+
+.dep-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  background: var(--dep-card-bg, #f9fafb);
+  border-radius: 12px;
+}
+
+.dep-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary, #6b7280);
+}
+
+.dep-stat-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary, #111827);
+}
+
+.dep-stat-value.loss {
+  color: var(--danger, #ef4444);
+}

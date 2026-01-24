@@ -1,0 +1,266 @@
+.deal-rating-panel {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.rating-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  color: white;
+}
+
+.rating-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.rating-emoji {
+  font-size: 2.5rem;
+}
+
+.rating-label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.rating-score {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.score-value {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.score-max {
+  font-size: 1.25rem;
+  opacity: 0.8;
+}
+
+/* Rule Section */
+.rule-section {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.rule-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.rule-icon {
+  font-size: 1.25rem;
+}
+
+.rule-description {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.rule-checks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.rule-check {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--bg-secondary);
+}
+
+.rule-check.passed {
+  background: var(--success-bg);
+  border: 1px solid var(--success-color);
+}
+
+.rule-check.failed {
+  background: var(--error-bg);
+  border: 1px solid var(--error-color);
+}
+
+.check-icon {
+  font-size: 1.25rem;
+}
+
+.check-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.check-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.check-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Rate Section */
+.rate-section {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.section-icon {
+  font-size: 1.25rem;
+}
+
+.rate-quality {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.rate-quality.rate-excellent {
+  background: linear-gradient(135deg, #22c55e20, #22c55e10);
+  border: 1px solid #22c55e;
+}
+
+.rate-quality.rate-good {
+  background: linear-gradient(135deg, #84cc1620, #84cc1610);
+  border: 1px solid #84cc16;
+}
+
+.rate-quality.rate-average {
+  background: linear-gradient(135deg, #eab30820, #eab30810);
+  border: 1px solid #eab308;
+}
+
+.rate-quality.rate-poor {
+  background: linear-gradient(135deg, #f9731620, #f9731610);
+  border: 1px solid #f97316;
+}
+
+.rate-quality.rate-predatory {
+  background: linear-gradient(135deg, #ef444420, #ef444410);
+  border: 1px solid #ef4444;
+}
+
+.rate-quality-label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.rate-difference {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.ltv-dti {
+  display: flex;
+  gap: 1rem;
+}
+
+.metric {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  background: var(--bg-secondary);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.metric-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Feedback Sections */
+.feedback-section {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.feedback-section:last-child {
+  border-bottom: none;
+}
+
+.feedback-section.good {
+  background: var(--success-bg);
+}
+
+.feedback-section.warning {
+  background: var(--warning-bg);
+}
+
+.feedback-section.recommendation {
+  background: var(--info-bg);
+}
+
+.feedback-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.feedback-icon {
+  font-size: 1rem;
+}
+
+.feedback-list {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.feedback-list li {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.feedback-list li:last-child {
+  margin-bottom: 0;
+}

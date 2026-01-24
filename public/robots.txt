@@ -1,0 +1,14 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Allow Google AdSense bot
+User-agent: Mediapartners-Google
+Allow: /
+
+# Allow Google Ads bot
+User-agent: AdsBot-Google
+Allow: /
+
+# Sitemap location
+Sitemap: https://nowhereon.com/sitemap.xml

@@ -1,0 +1,189 @@
+.results-panel {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.results-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.results-icon {
+  font-size: 1.5rem;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.result-card {
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+
+.result-card.primary {
+  background: var(--primary-light);
+  border-color: var(--primary-color);
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 640px) {
+  .result-card.primary {
+    grid-column: auto;
+  }
+}
+
+.result-card.highlight {
+  background: var(--warning-bg);
+  border-color: var(--warning-color);
+}
+
+.result-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.result-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.result-value.large {
+  font-size: 2rem;
+}
+
+.result-sublabel {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+/* Taxes Section */
+.taxes-section,
+.total-cost-section {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: 1.5rem;
+}
+
+.section-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.section-icon {
+  font-size: 1.25rem;
+}
+
+.tax-breakdown,
+.cost-breakdown {
+  background: var(--bg-secondary);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.tax-row,
+.cost-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tax-row:last-child,
+.cost-item:last-child {
+  border-bottom: none;
+}
+
+.tax-label,
+.cost-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.tax-value,
+.cost-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tax-row.total,
+.cost-item.total {
+  background: var(--bg-tertiary);
+  border-radius: 0.375rem;
+  margin-top: 0.5rem;
+}
+
+.tax-row.total .tax-label,
+.cost-item.total .cost-label {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tax-row.grand-total {
+  background: var(--primary-color);
+  border-radius: 0.375rem;
+  margin-top: 0.5rem;
+}
+
+.tax-row.grand-total .tax-label,
+.tax-row.grand-total .tax-value {
+  color: white;
+  font-weight: 700;
+}
+
+.extra-cost-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--warning-bg);
+  border: 1px solid var(--warning-color);
+  border-radius: 0.5rem;
+}
+
+.callout-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.callout-text {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.callout-text strong {
+  color: var(--warning-dark);
+}

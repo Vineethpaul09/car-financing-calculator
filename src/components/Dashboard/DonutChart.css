@@ -1,0 +1,126 @@
+.donut-chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: var(--card-bg, #ffffff);
+  border-radius: 20px;
+  border: 1px solid var(--border-color, #e5e7eb);
+}
+
+.donut-chart-wrapper {
+  width: 180px;
+  height: 180px;
+}
+
+.donut-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.donut-segment {
+  animation: donutGrow 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes donutGrow {
+  0% {
+    stroke-dasharray: 0 440;
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.donut-center-label {
+  font-size: 12px;
+  fill: var(--text-secondary, #6b7280);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.donut-center-value {
+  font-size: 18px;
+  fill: var(--text-primary, #111827);
+  font-weight: 700;
+}
+
+.donut-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  width: 100%;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: var(--legend-bg, #f9fafb);
+  border-radius: 10px;
+  min-width: 140px;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.legend-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary, #6b7280);
+  font-weight: 500;
+}
+
+.legend-value {
+  font-size: 0.875rem;
+  color: var(--text-primary, #111827);
+  font-weight: 700;
+}
+
+.legend-percent {
+  font-size: 0.7rem;
+  color: var(--text-tertiary, #9ca3af);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .donut-chart-container {
+    padding: 16px;
+  }
+
+  .donut-chart-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .legend-item {
+    min-width: calc(50% - 8px);
+    padding: 6px 10px;
+  }
+}
