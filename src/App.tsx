@@ -238,7 +238,6 @@ function Dashboard() {
               />
             )}
           </aside>
-          {/* Gmail: Vineeth@gmail.com password: vineth@ronin12 */}
           {/* Main Dashboard Content */}
           <div className="dashboard-content">
             {/* Tab Navigation (Desktop) */}
