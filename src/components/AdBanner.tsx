@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import "./AdBanner.css";
 
+
 // Ad slot types for different placements
 export type AdSlotType =
   | "header-banner" // 728x90 leaderboard
