@@ -469,8 +469,13 @@ export function calculateWeeklyBenefits(input: LoanInput) {
 
 /**
  * Compare different loan terms
+ * @param input - Loan input parameters
+ * @param taxes - Optional tax amount to include in total cost (default: 0)
  */
-export function compareLoanTerms(input: LoanInput): TermComparison[] {
+export function compareLoanTerms(
+  input: LoanInput,
+  taxes: number = 0,
+): TermComparison[] {
   const terms = [24, 36, 48, 60, 72, 84];
   const comparisons: TermComparison[] = [];
 
@@ -510,7 +515,7 @@ export function compareLoanTerms(input: LoanInput): TermComparison[] {
       termMonths: term,
       monthlyPayment: summary.monthlyPayment,
       totalInterest: summary.totalInterest,
-      totalCost: summary.totalPayment + input.downPayment,
+      totalCost: summary.totalPayment + input.downPayment + taxes,
       rating,
       isRecommended: false,
     });

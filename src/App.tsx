@@ -100,8 +100,8 @@ function Dashboard() {
     [input.vehiclePrice, input.isNewVehicle],
   );
   const termComparisons = useMemo<TermComparison[]>(
-    () => compareLoanTerms(input),
-    [input],
+    () => compareLoanTerms(input, taxes.totalTax),
+    [input, taxes.totalTax],
   );
   const amortizationSchedule = useMemo<MonthlyBreakdown[]>(
     () => generateAmortizationSchedule(input),
@@ -238,7 +238,6 @@ function Dashboard() {
               />
             )}
           </aside>
-
           {/* Main Dashboard Content */}
           <div className="dashboard-content">
             {/* Tab Navigation (Desktop) */}
@@ -248,7 +247,9 @@ function Dashboard() {
             <HeroPaymentCard
               monthlyPayment={results.monthlyPayment}
               term={input.termMonths}
-              totalCost={results.totalPayment + input.downPayment}
+              totalCost={
+                results.totalPayment + input.downPayment + taxes.totalTax
+              }
               totalInterest={results.totalInterest}
               affordabilityStatus={affordabilityStatus}
               payoffDate={payoffDate}
